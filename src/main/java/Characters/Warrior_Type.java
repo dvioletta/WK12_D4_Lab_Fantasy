@@ -1,34 +1,25 @@
 package Characters;
 
-public
-class Warrior_Type extends Character_Type {
+import Characters.Weapon;
+
+public class Warrior_Type extends Character_Type implements IFight{
 
     public String type;
-    public String weapon;
 
-    public Warrior_Type(String name, Integer HP, String type, String weapon) {
+    public Warrior_Type(String name, Integer HP, String type, Weapon weapon) {
         super(name, HP);
         this.type = type;
-        this.weapon = weapon;
+        weapon = new Weapon(weapon.getType(), weapon.getDamage());
     }
 
-    public
-    String getType() {
+    public String getType() {
         return type;
     }
 
-    public
-    void setType(String type) {
+    public void setType(String type) {
         this.type = type;
     }
 
     public
-    String getWeapon() {
-        return weapon;
-    }
 
-    public
-    void setWeapon(String weapon) {
-        this.weapon = weapon;
-    }
 }

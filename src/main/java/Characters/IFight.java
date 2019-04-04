@@ -1,5 +1,7 @@
 package Characters;
 
-public
-interface IFight {
+public interface IFight {
+
+
+
 }
