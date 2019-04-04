@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Warrior_TypeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-04-04T10:10:36" hostname="Pixie.local" time="0.001">
+  <properties/>
+  <testcase name="canCharacter" classname="Warrior_TypeTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
