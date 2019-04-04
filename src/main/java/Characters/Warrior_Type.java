@@ -20,6 +20,14 @@ public class Warrior_Type extends Character_Type implements IFight{
         this.type = type;
     }
 
-    public
+    public String getWeapon(Weapon weapon){
+        return weapon.getType();
+    }
+
+    public Weapon changeWeapon(Weapon weapon){
+        weapon = new Weapon(weapon.getType(), weapon.getDamage());
+        return weapon;
+    }
+
 
 }

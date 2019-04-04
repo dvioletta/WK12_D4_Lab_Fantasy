@@ -10,14 +10,14 @@ class Warrior_TypeTest {
 
     Warrior_Type warrior_type;
     Warrior_Type warrior_type2;
-    Weapon weapon1;
+    Weapon sword;
     Weapon weapon2;
 
     @Before
     public void before(){
-        weapon1 = new Weapon("Sword", 5);
+        sword = new Weapon("Sword", 5);
         weapon2 = new Weapon("Axe", 15);
-        warrior_type = new Warrior_Type("Xena", 20,"barbarian", weapon1);
+        warrior_type = new Warrior_Type("Xena", 20,"barbarian", sword);
         warrior_type2 = new Warrior_Type( "Bob", 20, "Knight", weapon2);
 
     }
@@ -27,6 +27,7 @@ class Warrior_TypeTest {
         assertEquals("Xena",warrior_type.getName());
         assertEquals(20, warrior_type.getHP());
         assertEquals("barbarian", warrior_type.getType());
+        assertEquals("Sword", warrior_type.getWeapon(sword));
     }
 
     @Test
@@ -40,5 +41,8 @@ class Warrior_TypeTest {
     }
 
     @Test
-    public
+    public void changeWeaponTest(){
+        warrior_type.changeWeapon(weapon2);
+        assertEquals("Axe", warrior_type.getWeapon(weapon2));
+    }
 }
