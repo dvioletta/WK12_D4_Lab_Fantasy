@@ -29,4 +29,8 @@ public abstract class Character_Type {
     void setHP(int HP) {
         this.HP = HP;
     }
+
+    public void reduceHP(int damage) {
+        this.HP -= damage;
+    }
 }
