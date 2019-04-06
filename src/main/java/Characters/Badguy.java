@@ -9,18 +9,26 @@ class Badguy extends Character_Type {
 
     public Badguy(String name, int HP,Weapon weapon) {
         super(name, HP);
-        this.weapon = weapon;
+        this.weapon = new Weapon(weapon.getType(), weapon.getDamage());;
     }
 
+    public String getWeapon(Weapon weapon){
+        return weapon.getType();
+    }
 
-    public
-    Weapon getWeapon() {
+    public int getWeaponDamage(Weapon weapon) {
+        return weapon.getDamage();
+    }
+
+    public Weapon changeWeapon(Weapon weapon){
+        weapon = new Weapon(weapon.getType(), weapon.getDamage());
         return weapon;
     }
 
-    public
-    void setWeapon(Weapon weapon) {
-        this.weapon = weapon;
+
+    public int attack() {
+
+        return this.getWeaponDamage(this.weapon);
     }
 
 

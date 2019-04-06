@@ -7,9 +7,9 @@ import java.util.Set;
 public
 class Monster {
 
-    private String name;
-    private String type;
-    private int HP;
+    protected String name;
+    protected String type;
+    protected int HP;
     private static Random random = new Random();
     private static Set<Integer> monsterFound = new HashSet<Integer>();
     private static int NUM_Monsters = 4;

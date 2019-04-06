@@ -37,6 +37,7 @@ public class Warrior_Type extends Character_Type {
 
 
     public int attack() {
+
         return this.getWeaponDamage(this.weapon);
     }
 }

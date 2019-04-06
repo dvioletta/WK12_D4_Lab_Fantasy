@@ -5,34 +5,41 @@ import Items.MagicPowers;
 public
 class Spellcaster_Type extends Character_Type{
 
-    public String type;
+    public MagicPowers magicPowers;
+    protected String type;
 
-    public Spellcaster_Type(String name, int HP, String type, MagicPowers spell) {
+    public Spellcaster_Type(String name, int HP, String type, MagicPowers magicPowers) {
         super(name, HP);
         this.type = type;
-        spell = new MagicPowers(spell.getPowerName(), spell.getDamage());
+        this.magicPowers = new MagicPowers(magicPowers.getPowerName(), magicPowers.getDamage());
     }
 
     public
     String getType() {
+
         return type;
     }
 
     public
     void setType(String type) {
+
         this.type = type;
     }
 
-    public String getPowerName(MagicPowers spell){
-        return spell.getPowerName();
+    public String getPowerName(MagicPowers magicPowers){
+
+        return magicPowers.getPowerName();
     }
 
-    public MagicPowers changeMagicPowers(MagicPowers spell){
-        spell = new MagicPowers(spell.getPowerName(), spell.getDamage());
-        return spell;
+    public int getMagicPowerDamage(MagicPowers magicPowers){
+        return magicPowers.getDamage();
     }
 
-    public String attack() {
-        return "attacked";
+    public MagicPowers changeMagicPowers(MagicPowers magicPowers){
+        this.magicPowers = new MagicPowers(magicPowers.getPowerName(),magicPowers.getDamage());
+        return magicPowers;
     }
+
+
+
 }
