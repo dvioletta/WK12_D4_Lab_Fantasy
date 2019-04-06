@@ -23,7 +23,7 @@ class Warrior_TypeTest {
         Spear = new Weapon("spear", 10);
         warrior_type = new Warrior_Type("Xena", 20,"barbarian", sword);
         warrior_type2 = new Warrior_Type( "Bob", 20, "Knight", Axe);
-        orc = new Badguy("Ork", 30, "Troll", Spear);
+        orc = new Badguy("Ork", 30,Spear);
     }
 
     @Test
