@@ -1,7 +1,9 @@
 package Characters;
 
+import Items.MagicPowers;
+
 public
-class Spellcaster_Type extends Character_Type implements IFight{
+class Spellcaster_Type extends Character_Type{
 
     public String type;
 
@@ -28,5 +30,9 @@ class Spellcaster_Type extends Character_Type implements IFight{
     public MagicPowers changeMagicPowers(MagicPowers spell){
         spell = new MagicPowers(spell.getPowerName(), spell.getDamage());
         return spell;
+    }
+
+    public String attack() {
+        return "attacked";
     }
 }

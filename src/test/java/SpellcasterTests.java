@@ -1,4 +1,4 @@
-import Characters.MagicPowers;
+import Items.MagicPowers;
 import Characters.Spellcaster_Type;
 import org.junit.Before;
 import org.junit.Test;

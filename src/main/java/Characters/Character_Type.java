@@ -1,6 +1,10 @@
 package Characters;
 
+import Interfaces.IDefend;
+import Interfaces.IFight;
+
 public abstract class Character_Type {
+//        implements IFight, IDefend {
 
     protected String name;
     protected int HP;

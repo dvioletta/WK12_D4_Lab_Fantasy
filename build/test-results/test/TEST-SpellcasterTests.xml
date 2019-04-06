@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SpellcasterTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-04-04T13:40:15" hostname="Pixie.local" time="0.001">
-  <properties/>
-  <testcase name="changeCharacterTest" classname="SpellcasterTests" time="0.001"/>
-  <testcase name="canCharacter" classname="SpellcasterTests" time="0.0"/>
-  <testcase name="changeWeaponTest" classname="SpellcasterTests" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

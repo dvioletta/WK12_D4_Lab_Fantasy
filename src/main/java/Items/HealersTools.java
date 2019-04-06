@@ -1,12 +1,13 @@
-package Characters;
+package Items;
 
 public
-class Health {
+class HealersTools {
 
     public String healingToolName;
     public int damage;
 
-    public Health(String healingToolName, int damage){
+    public
+    HealersTools(String healingToolName, int damage){
         this.healingToolName = healingToolName;
         this.damage = damage;
     }

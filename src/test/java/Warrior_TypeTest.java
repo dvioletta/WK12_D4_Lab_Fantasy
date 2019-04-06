@@ -1,5 +1,6 @@
+import Characters.Badguy;
 import Characters.Warrior_Type;
-import Characters.Weapon;
+import Items.Weapon;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,15 +12,18 @@ class Warrior_TypeTest {
     Warrior_Type warrior_type;
     Warrior_Type warrior_type2;
     Weapon sword;
-    Weapon weapon2;
+    Weapon Axe;
+    Weapon Spear;
+    Badguy orc;
 
     @Before
     public void before(){
         sword = new Weapon("Sword", 5);
-        weapon2 = new Weapon("Axe", 15);
+        Axe = new Weapon("Axe", 15);
+        Spear = new Weapon("spear", 10);
         warrior_type = new Warrior_Type("Xena", 20,"barbarian", sword);
-        warrior_type2 = new Warrior_Type( "Bob", 20, "Knight", weapon2);
-
+        warrior_type2 = new Warrior_Type( "Bob", 20, "Knight", Axe);
+        orc = new Badguy("Ork", 30, "Troll", Spear);
     }
 
     @Test
@@ -42,7 +46,13 @@ class Warrior_TypeTest {
 
     @Test
     public void changeWeaponTest(){
-        warrior_type.changeWeapon(weapon2);
-        assertEquals("Axe", warrior_type.getWeapon(weapon2));
+        warrior_type.changeWeapon(Axe);
+        assertEquals("Axe", warrior_type.getWeapon(Axe));
+    }
+
+    @Test
+    public void canAttack() {
+        orc.reduceHP(warrior_type.attack());
+        assertEquals(25, orc.getHP());
     }
 }

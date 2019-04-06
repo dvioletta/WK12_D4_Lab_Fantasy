@@ -1,8 +1,9 @@
 package Characters;
 
-import Characters.Weapon;
 
-public class Warrior_Type extends Character_Type implements IFight{
+import Items.Weapon;
+
+public class Warrior_Type extends Character_Type {
 
     public String type;
     public Weapon weapon;
@@ -25,7 +26,7 @@ public class Warrior_Type extends Character_Type implements IFight{
         return weapon.getType();
     }
 
-    public int getWeaponDamagr(Weapon weapon) {
+    public int getWeaponDamage(Weapon weapon) {
         return weapon.getDamage();
     }
 
@@ -35,8 +36,7 @@ public class Warrior_Type extends Character_Type implements IFight{
     }
 
 
-    public void attack(Character_Type badguy) {
-        int damage = this.getWeaponDamagr(this.weapon);
-        badguy.reduceHP(damage);
+    public int attack() {
+        return this.getWeaponDamage(this.weapon);
     }
 }

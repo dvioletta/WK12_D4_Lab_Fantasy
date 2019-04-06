@@ -1,4 +1,4 @@
-package Characters;
+package Items;
 
 public class MagicPowers {
 

@@ -1,17 +1,17 @@
 package Characters;
 
-import Characters.Health;
+import Items.HealersTools;
 
-public class Healer_Type extends Character_Type implements IFight {
+public class Healer_Type extends Character_Type{
 
     public String type;
+    public HealersTools healingTools;
 
 
-    public Healer_Type(String name, int HP, String type,  Health healingTool){
+    public Healer_Type(String name, int HP, String type,  HealersTools healingTools){
         super(name, HP);
         this.type = type;
-        healingTool = new Health(healingTool.getHealingToolName(), healingTool.getDamage());
-
+        this.healingTools = new HealersTools(healingTools.getHealingToolName(), healingTools.getDamage());
     }
 
     public String getType() {
@@ -22,13 +22,16 @@ public class Healer_Type extends Character_Type implements IFight {
         this.type = type;
     }
 
-    public String getHealingToolName(Health healingTool){
+    public String getHealingToolName(HealersTools healingTool){
 
         return healingTool.getHealingToolName();
     }
 
-    public Health changeHealingName(Health healingTool){
-        healingTool = new Health(healingTool.getHealingToolName(), healingTool.getDamage());
-        return healingTool;
+    public void changeHealingName(HealersTools newhealingTools){
+        this.healingTools = newhealingTools;
     }
+
+//    public int attack() {
+//        return this.getHealingToolDamage(this.healingTools);
+//    }
 }

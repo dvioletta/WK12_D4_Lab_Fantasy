@@ -1,5 +1,5 @@
 import Characters.Healer_Type;
-import Characters.Health;
+import Items.HealersTools;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,13 +8,13 @@ import static org.junit.Assert.assertEquals;
 public class HealerTest {
 
     Healer_Type healer;
-    Health potion;
-    Health herb;
+    HealersTools potion;
+    HealersTools herb;
 
     @Before
     public void before() {
-        potion = new Health("Potion", -10);
-        herb = new Health("Herb", -5);
+        potion = new HealersTools("Potion", -10);
+        herb = new HealersTools("Herb", -5);
         healer = new Healer_Type("Hank", 15, "Healer", herb);
     }
 
