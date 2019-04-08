@@ -1,9 +1,11 @@
 package Characters;
 
 
+import Interfaces.IDefend;
+import Interfaces.IFlight;
 import Items.Weapon;
 
-public class Warrior_Type extends Character_Type {
+public class Warrior_Type extends Character_Type implements IFlight {
 
     public String type;
     public Weapon weapon;
@@ -40,4 +42,15 @@ public class Warrior_Type extends Character_Type {
 
         return this.getWeaponDamage(this.weapon);
     }
+
+    public void fight(Character_Type badguy, int HP) {
+        badguy.takedamage(this.getWeaponDamage(this.weapon));
+
+    }
+
+    public void takedamage(int damage){
+        this.HP -=damage;
+    }
+
+
 }

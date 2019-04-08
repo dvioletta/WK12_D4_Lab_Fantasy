@@ -1,10 +1,14 @@
 package Rooms;
 
 import Characters.Warrior_Type;
+import Interfaces.IDefend;
+import Interfaces.IFlight;
 import Items.Weapon;
 
 public
-class Turns {
+class Turns  extends
+//        IDefend, IFlight
+        {
     protected Warrior_Type warrior_type;
     protected Monster monster;
     protected Weapon weapon;
@@ -22,4 +26,5 @@ class Turns {
     public boolean isAlive(){
         return monster.HP > 0;
     }
+
 }
